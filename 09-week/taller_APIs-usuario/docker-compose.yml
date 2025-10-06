@@ -1,0 +1,13 @@
+version: "3.9"
+services:
+  db_apiusuarios:
+    image: postgres:15-alpine
+    container_name: postgres_apiusuarios_container
+    ports:
+      - "5880:5432"
+    environment:
+      POSTGRES_USER: alejomc12
+      POSTGRES_PASSWORD: secret
+      POSTGRES_DB: usuarios-api
+    volumes:
+      - ./data-apiusuarios:/var/lib/postgresql/data
